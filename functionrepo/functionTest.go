@@ -51,3 +51,8 @@ func Calladd(x int, y int) int {
 
 	return x + y
 }
+
+//CallfuncReturnFunc : its a function that return a function
+func CallfuncReturnFunc(x int) func() {
+	return func() { fmt.Println("function has been retirned whit value x: ", x) }
+}

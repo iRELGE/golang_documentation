@@ -49,6 +49,7 @@ func main() {
 	fmt.Printf("add function x+y= %v", functionrepo.Calladd(1, 2))
 	functionrepo.Func1()
 	functionrepo.Func3()
+	functionrepo.CallfuncReturnFunc(2)()
 
 }
 
