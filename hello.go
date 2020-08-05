@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 
+	"rabie.com/hello/arrayRepo"
 	"rabie.com/hello/forRepo"
+	"rabie.com/hello/functionrepo"
 	"rabie.com/hello/mapRepo"
 	"rabie.com/hello/pointerRepo"
 	"rabie.com/hello/rangerepo"
@@ -21,7 +23,10 @@ func main() {
 	fmt.Println("pointer //////////////////////////////////")
 	pointerRepo.CallPointer()
 	fmt.Println("struct //////////////////////////////////")
-	a := structRepo.CallStruct(1, 2, 3)
+	a := structRepo.CallStruct()
+	a.Brake_pedal = 1
+	a.Gas_pedal = 2
+	a.Steering_well = 3
 	fmt.Println("struct car value:", a)
 	fmt.Println("for //////////////////////////////////")
 	forRepo.CallFor()
@@ -33,6 +38,18 @@ func main() {
 	mapRepo.CallDeleteMap("js")
 	fmt.Println("sheck map /////////////////////////////////////////")
 	mapRepo.CallSheckMap("c#")
+	fmt.Println("make new map /////////////////////////////////////////")
+	mapRepo.CallMakeMap("ts", 4)
+	fmt.Println("call array /////////////////////////////////////////")
+	arrayRepo.CallArray()
+	fmt.Println("functions /////////////////////////////////////////")
+	functionrepo.SimpleFunction()
+	functionrepo.FunctionWhitParam(1, 2)
+	functionrepo.ContinuedFunction(1, 2, 3)
+	fmt.Printf("add function x+y= %v", functionrepo.Calladd(1, 2))
+	functionrepo.Func1()
+	functionrepo.Func3()
+
 }
 
 // type car struct {

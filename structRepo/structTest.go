@@ -1,13 +1,13 @@
 package structRepo
 
 type Car struct {
-	gas_pedal     int
-	brake_pedal   int
-	steering_well int
+	Gas_pedal     int
+	Brake_pedal   int
+	Steering_well int
 }
 
-func CallStruct(a, b, c int) (Car_a Car) {
-	Car_a = Car{a, b, c}
+func CallStruct() (Car_a Car) {
+	Car_a = Car{}
 
 	return
 }

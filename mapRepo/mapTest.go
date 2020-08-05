@@ -14,6 +14,13 @@ func CallMap() {
 	fmt.Println(a["go"])
 
 }
+func CallMakeMap(key string, val int) {
+	l := make(map[string]int)
+	l[key] = val
+	fmt.Println("your map is: ", l)
+
+}
+
 func CallMapTool() (b map[string]int) {
 	b = a
 	return
@@ -28,7 +35,7 @@ func CallSheckMap(key string) {
 	val, ok := a[key]
 	if ok == true {
 		fmt.Printf("key %s exist", key)
-		fmt.Println("key value:", val)
+		fmt.Println(" key value:", val)
 
 	} else {
 		fmt.Printf("key %s doesn't exist", key)
