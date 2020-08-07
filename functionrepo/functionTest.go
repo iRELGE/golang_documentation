@@ -46,6 +46,16 @@ func func2(test func(int) int) {
 	fmt.Println(test(7))
 }
 
+func test1(i int) int {
+	return i * -1
+}
+
+//function take function as parame
+func test2(test int) {
+
+	fmt.Println(test1(9))
+}
+
 //Calladd :exrc add function
 func Calladd(x int, y int) int {
 

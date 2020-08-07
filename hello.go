@@ -8,6 +8,7 @@ import (
 	"rabie.com/hello/functionrepo"
 	"rabie.com/hello/mapRepo"
 	"rabie.com/hello/pointerRepo"
+	"rabie.com/hello/pointerreceiverRepo"
 	"rabie.com/hello/rangerepo"
 	"rabie.com/hello/sliceRepo"
 	"rabie.com/hello/structRepo"
@@ -50,6 +51,10 @@ func main() {
 	functionrepo.Func1()
 	functionrepo.Func3()
 	functionrepo.CallfuncReturnFunc(2)()
+
+	v := pointerreceiverRepo.Vertex{3, 4}
+	v.Scale(10)
+	fmt.Println(v.Abs())
 
 }
 
