@@ -2,17 +2,27 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"rabie.com/hello/arrayRepo"
 	"rabie.com/hello/forRepo"
 	"rabie.com/hello/functionrepo"
+	"rabie.com/hello/goroutinerepo"
 	"rabie.com/hello/mapRepo"
 	"rabie.com/hello/pointerRepo"
 	"rabie.com/hello/pointerreceiverRepo"
+	"rabie.com/hello/pointersFuncRepo"
 	"rabie.com/hello/rangerepo"
 	"rabie.com/hello/sliceRepo"
 	"rabie.com/hello/structRepo"
 )
+
+func GoroutineTest(s string) {
+	for i := 0; i > 3; i++ {
+		time.Sleep(time.Second)
+		fmt.Println(s, i)
+	}
+}
 
 func main() {
 	fmt.Println("range //////////////////////////////////")
@@ -55,6 +65,14 @@ func main() {
 	v := pointerreceiverRepo.Vertex{3, 4}
 	v.Scale(10)
 	fmt.Println(v.Abs())
+	///////
+	v2 := pointersFuncRepo.Vertex{3, 4}
+	pointersFuncRepo.Scale(&v2, 10)
+	fmt.Println(pointersFuncRepo.Abs(v2))
+	///// goroutine////////
+	fmt.Println("goroutine")
+	go goroutinerepo.GoroutineTest("goroutine")
+	goroutinerepo.GoroutineTest("no goroutine")
 
 }
 
